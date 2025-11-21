@@ -25,32 +25,26 @@
   </script>
   <!-- AOS CSS -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Link main.js -->
+  <script src="js/main.js" defer></script>
 </head>
 <body class="font-sans bg-creamWhite text-charcoal scroll-smooth">
 
   <!-- Navbar -->
 
-  <nav id="navbar" class="w-full py-4 fixed top-0 z-50 backdrop-blur-md bg-creamWhite/80 transition-all duration-500 shadow-md">
+  <nav class="w-full py-4 fixed top-0 z-50 backdrop-blur-md bg-creamWhite/80 shadow-md">
     <div class="max-w-6xl mx-auto flex justify-between items-center px-4 md:px-6">
       <div class="flex items-center gap-2">
         <img src="assets/mokdev_logo.svg" alt="Logo" class="w-10 h-10">
         <h1 class="text-xl font-bold text-charcoal">MokDev Creations</h1>
       </div>
-      <div id="navLinks" class="hidden md:flex gap-6">
+      <div class="hidden md:flex gap-6">
         <a href="#hero" class="hover:text-deepForest transition">Home</a>
         <a href="#about" class="hover:text-deepForest transition">About</a>
         <a href="#skills" class="hover:text-deepForest transition">Skills</a>
         <a href="#projects" class="hover:text-deepForest transition">Projects</a>
         <a href="#contact" class="hover:text-deepForest transition">Contact</a>
       </div>
-      <button id="navToggle" class="md:hidden text-charcoal text-2xl transition-transform duration-300">☰</button>
-    </div>
-    <div id="mobileMenu" class="md:hidden bg-creamWhite/95 shadow-md flex flex-col gap-4 px-4 py-4 max-h-0 overflow-hidden transition-all duration-500 rounded-b-lg">
-      <a href="#hero" class="hover:text-deepForest" onclick="closeMenu()">Home</a>
-      <a href="#about" class="hover:text-deepForest" onclick="closeMenu()">About</a>
-      <a href="#skills" class="hover:text-deepForest" onclick="closeMenu()">Skills</a>
-      <a href="#projects" class="hover:text-deepForest" onclick="closeMenu()">Projects</a>
-      <a href="#contact" class="hover:text-deepForest" onclick="closeMenu()">Contact</a>
     </div>
   </nav>
 
@@ -146,7 +140,7 @@
     <p class="mb-6 text-sm md:text-base" data-aos="fade-up" data-aos-delay="100">
       Have a project in mind? We’d love to help you bring it to life.
     </p>
-    <form action="contact.php" method="POST" id="contactForm" class="max-w-md w-full mx-auto flex flex-col gap-4 px-4 sm:px-6" data-aos="fade-up" data-aos-delay="200">
+    <form action="contact.php" method="POST" class="max-w-md w-full mx-auto flex flex-col gap-4 px-4 sm:px-6" data-aos="fade-up" data-aos-delay="200">
       <input type="text" name="name" placeholder="Your Name" required class="w-full p-3 rounded-lg text-charcoal focus:outline-none focus:ring-2 focus:ring-softOlive focus:ring-opacity-50"/>
       <input type="email" name="email" placeholder="Your Email" required class="w-full p-3 rounded-lg text-charcoal focus:outline-none focus:ring-2 focus:ring-softOlive focus:ring-opacity-50"/>
       <textarea name="message" placeholder="Your Message" required class="w-full p-3 rounded-lg text-charcoal focus:outline-none focus:ring-2 focus:ring-softOlive focus:ring-opacity-50 resize-none h-32 md:h-40"></textarea>
@@ -172,18 +166,18 @@
     </div>
   </footer>
 
-  <!-- Scroll to Top Button -->
-
-<button id="scrollTopBtn" class="fixed bottom-8 right-8 bg-deepForest text-creamWhite p-3 rounded-full shadow-lg hover:bg-deepForest/80 hidden">↑</button>
-
-  <!-- Scripts -->
+  <!-- AOS JS -->
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-  <script src="main.js"></script>
+  <script>
+    AOS.init();
+  </script>
 
 </body>
 </html>
+
+
 
 
 
