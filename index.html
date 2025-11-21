@@ -57,13 +57,13 @@
   <!-- Hero Section -->
 
   <section id="hero" class="pt-28 pb-20 bg-gradient-to-b from-creamWhite to-softOlive/20 flex flex-col md:flex-row items-center max-w-6xl mx-auto px-4">
-    <div class="flex-1 mb-10 md:mb-0" data-aos="fade-right">
-      <h1 class="text-4xl md:text-5xl font-bold text-charcoal">MokDev Creations</h1>
-      <p class="mt-4 text-lg md:text-xl text-deepForest">Where Design Meets Function</p>
+    <div class="flex-1 mb-10 md:mb-0 text-center md:text-left" data-aos="fade-right">
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-charcoal leading-tight">MokDev Creations</h1>
+      <p class="mt-4 text-base sm:text-lg md:text-xl text-deepForest">Where Design Meets Function</p>
       <a href="#projects" class="mt-6 inline-block bg-deepForest text-creamWhite px-6 py-3 rounded-xl shadow hover:bg-deepForest/80 transition" data-aos="zoom-in">View My Work</a>
     </div>
-    <div class="flex-1 flex justify-center" data-aos="fade-left">
-      <img src="assets/mokdev_logo.svg" class="w-48 md:w-64 opacity-20" alt="Logo">
+    <div class="flex-1 flex justify-center md:justify-end" data-aos="fade-left">
+      <img src="assets/mokdev_logo.svg" class="w-36 sm:w-48 md:w-64 opacity-20" alt="Logo">
     </div>
   </section>
 
@@ -143,14 +143,16 @@
 
   <section id="contact" class="py-20 bg-deepForest text-creamWhite text-center">
     <h2 class="text-3xl font-semibold mb-4" data-aos="fade-up">Let's Work Together</h2>
-    <p class="mb-6" data-aos="fade-up" data-aos-delay="100">Have a project in mind? We’d love to help you bring it to life.</p>
-    <form action="contact.php" method="POST" id="contactForm" class="max-w-md mx-auto flex flex-col gap-4" data-aos="fade-up" data-aos-delay="200">
-      <input type="text" name="name" placeholder="Your Name" required class="p-3 rounded-lg text-charcoal"/>
-      <input type="email" name="email" placeholder="Your Email" required class="p-3 rounded-lg text-charcoal"/>
-      <textarea name="message" placeholder="Your Message" required class="p-3 rounded-lg text-charcoal"></textarea>
-      <button type="submit" class="bg-creamWhite text-deepForest py-3 rounded-lg font-medium hover:bg-warmBeige transition duration-300">Send Message</button>
+    <p class="mb-6 text-sm md:text-base" data-aos="fade-up" data-aos-delay="100">
+      Have a project in mind? We’d love to help you bring it to life.
+    </p>
+    <form action="contact.php" method="POST" id="contactForm" class="max-w-md w-full mx-auto flex flex-col gap-4 px-4 sm:px-6" data-aos="fade-up" data-aos-delay="200">
+      <input type="text" name="name" placeholder="Your Name" required class="w-full p-3 rounded-lg text-charcoal focus:outline-none focus:ring-2 focus:ring-softOlive focus:ring-opacity-50"/>
+      <input type="email" name="email" placeholder="Your Email" required class="w-full p-3 rounded-lg text-charcoal focus:outline-none focus:ring-2 focus:ring-softOlive focus:ring-opacity-50"/>
+      <textarea name="message" placeholder="Your Message" required class="w-full p-3 rounded-lg text-charcoal focus:outline-none focus:ring-2 focus:ring-softOlive focus:ring-opacity-50 resize-none h-32 md:h-40"></textarea>
+      <button type="submit" class="w-full bg-creamWhite text-deepForest py-3 rounded-lg font-medium hover:bg-warmBeige transition duration-300">Send Message</button>
     </form>
-    <div class="mt-8 flex justify-center gap-6" data-aos="fade-up" data-aos-delay="300">
+    <div class="mt-8 flex justify-center gap-6 text-sm md:text-base" data-aos="fade-up" data-aos-delay="300">
       <a href="https://github.com" target="_blank" class="hover:text-softOlive transition">GitHub</a>
       <a href="https://linkedin.com" target="_blank" class="hover:text-softOlive transition">LinkedIn</a>
       <a href="mailto:youremail@example.com" class="hover:text-softOlive transition">Email</a>
@@ -174,52 +176,15 @@
 
 <button id="scrollTopBtn" class="fixed bottom-8 right-8 bg-deepForest text-creamWhite p-3 rounded-full shadow-lg hover:bg-deepForest/80 hidden">↑</button>
 
-  <!-- JS -->
-
-  <script>
-    // Scroll-to-top
-    const scrollTopBtn = document.getElementById("scrollTopBtn");
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 300) scrollTopBtn.classList.remove("hidden");
-      else scrollTopBtn.classList.add("hidden");
-    });
-    scrollTopBtn.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
-
-    // Mobile Menu Toggle
-    const navToggle = document.getElementById("navToggle");
-    const mobileMenu = document.getElementById("mobileMenu");
-    let menuOpen = false;
-    navToggle.addEventListener("click", () => {
-      menuOpen = !menuOpen;
-      mobileMenu.style.maxHeight = menuOpen ? mobileMenu.scrollHeight + "px" : "0";
-      navToggle.innerHTML = menuOpen ? "✕" : "☰";
-    });
-    function closeMenu() {
-      menuOpen = false;
-      mobileMenu.style.maxHeight = "0";
-      navToggle.innerHTML = "☰";
-    }
-
-    // Navbar scroll effect
-    const navbar = document.getElementById("navbar");
-    window.addEventListener("scroll", () => {
-      if(window.scrollY > 50) {
-        navbar.classList.add("shadow-lg");
-      } else {
-        navbar.classList.remove("shadow-lg");
-      }
-    });
-  </script>
-
-  <!-- AOS JS -->
+  <!-- Scripts -->
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-  <script>
-    AOS.init({ duration: 1000, once: true });
-  </script>
+  <script src="main.js"></script>
 
 </body>
 </html>
+
+
 
 
