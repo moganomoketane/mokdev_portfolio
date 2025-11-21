@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MokDev Creations</title>
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Tailwind Custom Colors -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            deepForest: "#3A5A40",
+            softOlive: "#A3B18A",
+            warmBeige: "#F2EDE4",
+            creamWhite: "#FAF9F6",
+            charcoal: "#2E2E2E",
+          }
+        }
+      }
+    }
+  </script>
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body class="font-sans bg-creamWhite text-charcoal scroll-smooth">
+
+  <!-- Navbar -->
+  <nav class="w-full py-4 bg-creamWhite shadow fixed top-0 z-50">
+    <div class="max-w-6xl mx-auto flex justify-between items-center px-4">
+      <div class="flex items-center gap-2">
+        <img src="assets/mokdev_logo.svg" alt="MokDev Logo" class="w-10 h-10">
+        <h1 class="text-xl font-bold text-charcoal">MokDev Creations</h1>
+      </div>
+      <div id="navLinks" class="hidden md:flex gap-6">
+        <a href="#hero" class="hover:text-deepForest transition">Home</a>
+        <a href="#about" class="hover:text-deepForest transition">About</a>
+        <a href="#skills" class="hover:text-deepForest transition">Skills</a>
+        <a href="#projects" class="hover:text-deepForest transition">Projects</a>
+        <a href="#contact" class="hover:text-deepForest transition">Contact</a>
+      </div>
+      <!-- Mobile Toggle -->
+      <button id="navToggle" class="md:hidden text-charcoal text-2xl">☰</button>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="md:hidden bg-creamWhite shadow-md flex flex-col gap-4 px-4 py-4 max-h-0 overflow-hidden transition-all duration-300">
+      <a href="#hero" class="hover:text-deepForest">Home</a>
+      <a href="#about" class="hover:text-deepForest">About</a>
+      <a href="#skills" class="hover:text-deepForest">Skills</a>
+      <a href="#projects" class="hover:text-deepForest">Projects</a>
+      <a href="#contact" class="hover:text-deepForest">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero" class="pt-28 pb-20 bg-gradient-to-b from-creamWhite to-softOlive/20 flex flex-col md:flex-row items-center max-w-6xl mx-auto px-4">
+    <div class="flex-1" data-aos="fade-right">
+      <h1 class="text-5xl font-bold text-charcoal">MokDev Creations</h1>
+      <p class="mt-4 text-xl text-deepForest">Where Design Meets Function</p>
+      <a href="#projects" class="mt-6 inline-block bg-deepForest text-creamWhite px-6 py-3 rounded-xl shadow hover:bg-deepForest/80 transition" data-aos="zoom-in">View My Work</a>
+    </div>
+    <div class="flex-1 flex justify-center" data-aos="fade-left">
+      <img src="assets/mokdev_logo.svg" class="w-64 opacity-20" alt="Logo">
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <!-- About Section -->
+<section id="about" class="py-20 max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
+  <div data-aos="fade-up">
+    <h2 class="text-3xl font-semibold mb-4">About MokDev Creations</h2>
+    <p class="text-lg leading-relaxed">
+      MokDev Creations is a web design and development company dedicated to crafting modern, functional, and visually striking digital experiences. 
+      We specialize in building responsive websites, intuitive user interfaces, and scalable web applications that help businesses grow online.
+    </p>
+    <p class="text-lg leading-relaxed mt-4">
+      Our team combines creativity, technical expertise, and a deep understanding of user experience to deliver solutions that not only look great but perform seamlessly. 
+      At MokDev Creations, <strong>design meets function</strong> to bring your vision to life.
+    </p>
+    <a href="#contact" class="inline-block mt-6 text-deepForest underline transition" data-aos="fade-up">Get in Touch →</a>
+  </div>
+  <div data-aos="fade-left">
+    <img src="assets/mokdev_logo.svg" class="w-72 opacity-30 mx-auto" alt="MokDev Creations Logo">
+  </div>
+</section>
+
+
+  <!-- Skills Section -->
+  <!-- Skills / Capabilities Section -->
+<section id="skills" class="py-20 bg-warmBeige max-w-6xl mx-auto px-4">
+  <h2 class="text-3xl font-semibold mb-10 text-center" data-aos="fade-up">Our Capabilities</h2>
+  <div class="grid md:grid-cols-3 gap-8">
+
+    <!-- Web Design -->
+    <div class="p-6 bg-creamWhite shadow rounded-xl border border-softOlive transform hover:scale-105 hover:shadow-xl transition duration-300" data-aos="flip-up">
+      <h3 class="text-xl font-bold mb-2 text-charcoal">Web Design</h3>
+      <p class="text-deepForest">
+        Creating visually engaging, modern, and responsive website designs that reflect your brand identity and deliver a seamless user experience.
+      </p>
+    </div>
+
+    <!-- Web Development -->
+    <div class="p-6 bg-creamWhite shadow rounded-xl border border-softOlive transform hover:scale-105 hover:shadow-xl transition duration-300" data-aos="flip-up" data-aos-delay="100">
+      <h3 class="text-xl font-bold mb-2 text-charcoal">Web Development</h3>
+      <p class="text-deepForest">
+        Building fast, scalable, and functional websites and web applications using modern technologies such as HTML, Tailwind, JavaScript, and Node.js.
+      </p>
+    </div>
+
+    <!-- UI / UX & Optimization -->
+    <div class="p-6 bg-creamWhite shadow rounded-xl border border-softOlive transform hover:scale-105 hover:shadow-xl transition duration-300" data-aos="flip-up" data-aos-delay="200">
+      <h3 class="text-xl font-bold mb-2 text-charcoal">UI / UX & Optimization</h3>
+      <p class="text-deepForest">
+        Enhancing user experience with intuitive interfaces, responsive layouts, and performance optimization to ensure smooth and engaging interactions.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-20 max-w-6xl mx-auto px-4">
+    <h2 class="text-3xl font-semibold mb-10 text-center" data-aos="fade-up">Featured Projects</h2>
+    <div class="grid md:grid-cols-3 gap-10">
+      <div class="bg-creamWhite shadow rounded-xl border border-softOlive p-4 transform hover:scale-105 hover:shadow-xl transition duration-300" data-aos="fade-up">
+        <div class="h-40 bg-warmBeige border mb-4"></div>
+        <h3 class="text-xl font-bold text-charcoal">Project One</h3>
+        <p class="text-deepForest text-sm my-2">Web Design & Development</p>
+        <a href="#" class="text-deepForest underline">View Project →</a>
+      </div>
+      <div class="bg-creamWhite shadow rounded-xl border border-softOlive p-4 transform hover:scale-105 hover:shadow-xl transition duration-300" data-aos="fade-up" data-aos-delay="100">
+        <div class="h-40 bg-warmBeige border mb-4"></div>
+        <h3 class="text-xl font-bold text-charcoal">Project Two</h3>
+        <p class="text-deepForest text-sm my-2">UI/UX & Frontend</p>
+        <a href="#" class="text-deepForest underline">View Project →</a>
+      </div>
+      <div class="bg-creamWhite shadow rounded-xl border border-softOlive p-4 transform hover:scale-105 hover:shadow-xl transition duration-300" data-aos="fade-up" data-aos-delay="200">
+        <div class="h-40 bg-warmBeige border mb-4"></div>
+        <h3 class="text-xl font-bold text-charcoal">Project Three</h3>
+        <p class="text-deepForest text-sm my-2">Full Stack</p>
+        <a href="#" class="text-deepForest underline">View Project →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+<section id="contact" class="py-20 bg-deepForest text-creamWhite text-center">
+  <h2 class="text-3xl font-semibold mb-4" data-aos="fade-up">Let's Work Together</h2>
+  <p class="mb-6" data-aos="fade-up" data-aos-delay="100">Have a project in mind? I’d love to help you bring it to life.</p>
+
+  <!-- Form With PHP Integration -->
+  <form action="contact.php" method="POST" id="contactForm" class="max-w-md mx-auto flex flex-col gap-4" data-aos="fade-up" data-aos-delay="200">
+    <input type="text" name="name" placeholder="Your Name" required class="p-3 rounded-lg text-charcoal"/>
+    <input type="email" name="email" placeholder="Your Email" required class="p-3 rounded-lg text-charcoal"/>
+    <textarea name="message" placeholder="Your Message" required class="p-3 rounded-lg text-charcoal"></textarea>
+
+    <button type="submit" class="bg-creamWhite text-deepForest py-3 rounded-lg font-medium hover:bg-warmBeige transition duration-300">Send Message</button>
+  </form>
+
+  <div class="mt-8 flex justify-center gap-6" data-aos="fade-up" data-aos-delay="300">
+    <a href="https://github.com" target="_blank" class="hover:text-softOlive transition">GitHub</a>
+    <a href="https://linkedin.com" target="_blank" class="hover:text-softOlive transition">LinkedIn</a>
+    <a href="mailto:youremail@example.com" class="hover:text-softOlive transition">Email</a>
+  </div>
+</section>
+
+
+  <!-- Footer -->
+  <footer class="bg-deepForest text-creamWhite py-8 mt-12">
+    <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
+      <p class="text-sm">&copy; 2025 MokDev Creations. All rights reserved.</p>
+      <div class="flex gap-6 text-lg">
+        <a href="https://github.com" target="_blank" class="hover:text-softOlive transition">GitHub</a>
+        <a href="https://linkedin.com" target="_blank" class="hover:text-softOlive transition">LinkedIn</a>
+        <a href="mailto:youremail@example.com" class="hover:text-softOlive transition">Email</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top Button -->
+  <button id="scrollTopBtn" class="fixed bottom-8 right-8 bg-deepForest text-creamWhite p-3 rounded-full shadow-lg hover:bg-deepForest/80 hidden">↑</button>
+
+  <!-- JS -->
+  <script>
+    // Scroll-to-top
+    const scrollTopBtn = document.getElementById("scrollTopBtn");
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 300) scrollTopBtn.classList.remove("hidden");
+      else scrollTopBtn.classList.add("hidden");
+    });
+    scrollTopBtn.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+
+    // Mobile Menu Toggle
+    const navToggle = document.getElementById("navToggle");
+    const mobileMenu = document.getElementById("mobileMenu");
+    let menuOpen = false;
+    navToggle.addEventListener("click", () => {
+      menuOpen = !menuOpen;
+      mobileMenu.style.maxHeight = menuOpen ? "500px" : "0";
+    });
+  </script>
+
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
+</body>
+</html>
